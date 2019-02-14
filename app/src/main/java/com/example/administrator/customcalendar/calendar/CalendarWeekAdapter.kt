@@ -15,7 +15,7 @@ class CalendarWeekAdapter(var context : Context , var list: ArrayList<String>) :
 
     init {
         inflater = LayoutInflater.from(context)
-        containerWidth = getWindowWidth(context)/7
+        containerWidth = getWindowWidth(context)/7 - 1
     }
 
     override fun onCreateViewHolder(p0: ViewGroup, p1: Int): CalendarWeekAdapter_VH {
