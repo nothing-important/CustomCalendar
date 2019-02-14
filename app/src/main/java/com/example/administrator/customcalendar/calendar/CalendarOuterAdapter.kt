@@ -33,10 +33,10 @@ class CalendarOuterAdapter(var context: Context, var list: ArrayList<ArrayList<M
         holder.outer_recycler.layoutManager = gridLayoutManager
         var calendarDayAdapter = CalendarDayAdapter(context , list[psn])
         holder.outer_recycler.adapter = calendarDayAdapter
-        var dividerGridItemDecoration = DividerGridItemDecoration(context , 1 , R.color.gray_97)
-        if (holder.outer_recycler.tag == null || !holder.outer_recycler.tag.equals("isFirst")){
-            holder.outer_recycler.addItemDecoration(dividerGridItemDecoration)
-        }
+//        var dividerGridItemDecoration = DividerGridItemDecoration(context , 1 , R.color.gray_97)
+//        if (holder.outer_recycler.tag == null || !holder.outer_recycler.tag.equals("isFirst")){
+//            holder.outer_recycler.addItemDecoration(dividerGridItemDecoration)
+//        }
     }
 
     class CalendarOutterAdapter_VH(var view: View) : RecyclerView.ViewHolder(view){

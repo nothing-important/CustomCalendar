@@ -41,11 +41,11 @@ class CalendarDayAdapter(var context: Context , var list : ArrayList<MonthBean>)
         }else{//正常值
             holder.item_day_tv.text = list[psn].bean?.day.toString()
             //当天日期
-            if (list[psn].year != list[psn].bean?.year)return
-            if (list[psn].month != list[psn].bean?.month)return
-            if (list[psn].day != list[psn].bean?.day)return
-            holder.item_day_tv.setTextColor(context.resources.getColor(R.color.colorAccent
-            ))
+            if (list[psn].currentYear == list[psn].bean?.year
+                    && list[psn].currentMonth == list[psn].bean?.month
+                    && list[psn].currentDay == list[psn].bean?.day){
+                holder.item_day_tv.setTextColor(context.resources.getColor(R.color.colorAccent))
+            }
         }
     }
 
